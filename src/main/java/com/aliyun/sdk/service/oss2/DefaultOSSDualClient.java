@@ -1025,4 +1025,44 @@ public class DefaultOSSDualClient implements OSSDualClient {
     public CompletableFuture<DeleteBucketOverwriteConfigResult> deleteBucketOverwriteConfigAsync(DeleteBucketOverwriteConfigRequest request, OperationOptions options) {
         return BucketOverwriteConfig.deleteBucketOverwriteConfigAsync(this.clientImpl, request, options);
     }
+
+    @Override
+    public PutStyleResult putStyle(PutStyleRequest request, OperationOptions options) {
+        return BucketStyle.putStyle(this.clientImpl, request, options);
+    }
+
+    @Override
+    public CompletableFuture<PutStyleResult> putStyleAsync(PutStyleRequest request, OperationOptions options) {
+        return BucketStyle.putStyleAsync(this.clientImpl, request, options);
+    }
+
+    @Override
+    public GetStyleResult getStyle(GetStyleRequest request, OperationOptions options) {
+        return BucketStyle.getStyle(this.clientImpl, request, options);
+    }
+
+    @Override
+    public CompletableFuture<GetStyleResult> getStyleAsync(GetStyleRequest request, OperationOptions options) {
+        return BucketStyle.getStyleAsync(this.clientImpl, request, options);
+    }
+
+    @Override
+    public ListStyleResult listStyle(ListStyleRequest request, OperationOptions options) {
+        return BucketStyle.listStyle(this.clientImpl, request, options);
+    }
+
+    @Override
+    public CompletableFuture<ListStyleResult> listStyleAsync(ListStyleRequest request, OperationOptions options) {
+        return BucketStyle.listStyleAsync(this.clientImpl, request, options);
+    }
+
+    @Override
+    public DeleteStyleResult deleteStyle(DeleteStyleRequest request, OperationOptions options) {
+        return BucketStyle.deleteStyle(this.clientImpl, request, options);
+    }
+
+    @Override
+    public CompletableFuture<DeleteStyleResult> deleteStyleAsync(DeleteStyleRequest request, OperationOptions options) {
+        return BucketStyle.deleteStyleAsync(this.clientImpl, request, options);
+    }
 }
