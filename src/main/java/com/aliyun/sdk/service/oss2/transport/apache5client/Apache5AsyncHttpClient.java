@@ -158,7 +158,7 @@ public class Apache5AsyncHttpClient implements HttpClient, AutoCloseable {
             if (body instanceof ByteArrayBinaryData) {
                 entityProducer = new BasicAsyncEntityProducer(body.toBytes(), null);
             } else if (body instanceof StringBinaryData) {
-                entityProducer = new StringAsyncEntityProducer(body.toString(), null);
+                entityProducer = new BasicAsyncEntityProducer(body.toBytes(), null);
             } else if (body instanceof InputStreamBinaryData) {
                 entityProducer = new ByteChannelAsyncEntityProducer(Channels.newChannel(body.toStream()), body.getLength());
             } else if (body instanceof ByteChannelBinaryData) {
